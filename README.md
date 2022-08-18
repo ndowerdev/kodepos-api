@@ -1,57 +1,52 @@
-# 🚀 Getting started with Strapi
+# API KODE POS INDONESIA
+API dibuat dengan [https://strapi.com/](Strapi), dan data diperoleh dari [`https://github.com/ArrayAccess/Indonesia-Postal-And-Area`]() dan di parsing ulang dengan PHP.
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+## List Provinsi
+Endpoint : [`https://api-kodepos.rendrian.dev/api/provinces`]()
 
-### `develop`
-
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
-
+#### Response
+```json
+{
+  "data": [
+    {
+      "id": 11,
+      "attributes": {
+        "name": "ACEH",
+        "slug": "aceh",
+        "lat": 4.0405070151375,
+        "long": 96.649002928244,
+        "createdAt": "2022-08-17T17:35:07.898Z",
+        "updatedAt": "2022-08-17T17:35:07.898Z",
+        "postal": [
+          "20000",
+          "23000",
+          "24000"
+        ]
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 1,
+      "pageCount": 34,
+      "total": 34
+    }
+  }
+}
 ```
-npm run develop
-# or
-yarn develop
+
+## List Kota
+Endpoint : [`https://api-kodepos.rendrian.dev/api/cities`]()
+
+
+#### Response
+```
 ```
 
-### `start`
+## List Kabupaten
+Endpoint : [`https://api-kodepos.rendrian.dev/api/districts`]()
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+## List Kecamatan
+Endpoint : [`https://api-kodepos.rendrian.dev/api/villages`]()
 
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
