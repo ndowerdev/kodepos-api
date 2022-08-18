@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kawins",
+  "info": {
+    "singularName": "kawin",
+    "pluralName": "kawins",
+    "displayName": "Kawin",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pengantin_pria": {
+      "type": "string"
+    },
+    "pengantin_wanita": {
+      "type": "string"
+    },
+    "tanggal_nikah": {
+      "type": "datetime"
+    },
+    "foto_bareng": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

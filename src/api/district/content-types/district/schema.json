@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "districts",
+  "info": {
+    "singularName": "district",
+    "pluralName": "districts",
+    "displayName": "district",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "long": {
+      "type": "float"
+    },
+    "postal": {
+      "type": "json"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "districts"
+    },
+    "villages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::village.village",
+      "mappedBy": "district"
+    }
+  }
+}

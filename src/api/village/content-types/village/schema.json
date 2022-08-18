@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "villages",
+  "info": {
+    "singularName": "village",
+    "pluralName": "villages",
+    "displayName": "village",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "long": {
+      "type": "float"
+    },
+    "postal": {
+      "type": "json"
+    },
+    "district": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::district.district",
+      "inversedBy": "villages"
+    }
+  }
+}
