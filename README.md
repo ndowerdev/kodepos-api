@@ -1,52 +1,22 @@
 # API KODE POS INDONESIA
 API dibuat dengan [https://strapi.com/](Strapi), dan data diperoleh dari [`https://github.com/ArrayAccess/Indonesia-Postal-And-Area`]() dan di parsing ulang dengan PHP.
 
-## List Provinsi
-Endpoint : [`https://api-kodepos.rendrian.dev/api/provinces`]()
-
-#### Response
-```json
-{
-  "data": [
-    {
-      "id": 11,
-      "attributes": {
-        "name": "ACEH",
-        "slug": "aceh",
-        "lat": 4.0405070151375,
-        "long": 96.649002928244,
-        "createdAt": "2022-08-17T17:35:07.898Z",
-        "updatedAt": "2022-08-17T17:35:07.898Z",
-        "postal": [
-          "20000",
-          "23000",
-          "24000"
-        ]
-      }
-    }
-  ],
-  "meta": {
-    "pagination": {
-      "page": 1,
-      "pageSize": 1,
-      "pageCount": 34,
-      "total": 34
-    }
-  }
-}
-```
-
-## List Kota
-Endpoint : [`https://api-kodepos.rendrian.dev/api/cities`]()
+## Daftar Endpoint
+| Endpoint                                       | Deskripsi                      | Method |
+| ---------------------------------------------- | -------------------------------  | ------ |
+| [`/provinces`](https://api-kodepos.rendrian.dev/api/provinces) | Ambil semua data Provinsi | `GET`  |
+| [`/provinces/{id}`](https://api-kodepos.rendrian.dev/api/provinces/{id}) | Ambil data Provinsi berdasarkan ID | `GET`  |
+| [`/cities`](https://api-kodepos.rendrian.dev/api/cities) | Ambil semua data Kota | `GET`  |
+| [`/cities/{id}`](https://api-kodepos.rendrian.dev/api/cities/{id}) | Ambil data kota bersadarkan ID | `GET`  |
+| [`/districts`](https://api-kodepos.rendrian.dev/api/districts) | Ambil semua data Kabupaten | `GET`  |
+| [`/districts/{id}`](https://api-kodepos.rendrian.dev/api/districts/{id}) | Ambil data kabupaten berdasarkan ID | `GET`  |
+| [`/villages`](https://api-kodepos.rendrian.dev/api/villages) | Ambil semua data kecamatan | `GET`  |
+| [`/villages/{od}`](https://api-kodepos.rendrian.dev/api/villages/{id}) | Ambil data Kecamatan berdasarkan ID | `GET`  |
 
 
-#### Response
-```
-```
+## API Paramenters
 
-## List Kabupaten
-Endpoint : [`https://api-kodepos.rendrian.dev/api/districts`]()
+Untuk parameter API yang bisa digunakan silahkan merujuk pada [Strapi API Paramenters](https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/rest/api-parameters.html)
 
-## List Kecamatan
-Endpoint : [`https://api-kodepos.rendrian.dev/api/villages`]()
+
 
